@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+
+<p id="demo"></p>
+<br><br>
+<p id="result"></p>
+
+<script>
+// Create a Map
+
+const fund = new Map([
+    ['FTM','0xb85517b87bf64942adf3a0b9e4c71e4bc5caa4e5'],
+    ['ONE','0x80c0cbdb8d0b190238795d376f0bd57fd40525f2'],
+    ['ATOM','0xac51C4c48Dc3116487eD4BC16542e27B5694Da1b'],
+    ['NEAR','0x72bd80445b0db58ebe3e8db056529d4c5faf6f2f'],
+  ]);
+
+let token = "";
+fund.forEach (function(value, key) {
+  token += key + ' = ' + value + "<br />";
+})
+document.getElementById("demo").innerHTML = fund.get("FTM");
+document.getElementById("result").innerHTML = token
+</script>
+
+</body>
+</html>
+
